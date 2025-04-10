@@ -1,0 +1,97 @@
+const frases = ["Clientes Mayoristas", "tu Negocio", "tu Evento", "Clientes Corporativos"];
+let index = 0;
+const rotador = document.getElementById("rotador-js");
+
+if (rotador) {
+    setInterval(() => {
+        rotador.style.opacity = 0;
+        setTimeout(() => {
+            index = (index + 1) % frases.length;
+            rotador.textContent = frases[index];
+            rotador.style.opacity = 1;
+        }, 300);
+    }, 3000);
+}
+
+const scrollContainer = document.getElementById("marcas-scroll");
+const marcas = document.getElementById("contenedor-marcas");
+
+if (scrollContainer && marcas) {
+    marcas.innerHTML += marcas.innerHTML;
+
+    const velocidad = 1.8;
+    let animationActive = true;
+
+    function scrollMarcas() {
+        if (animationActive) {
+            scrollContainer.scrollLeft += velocidad;
+            if (scrollContainer.scrollLeft >= marcas.scrollWidth / 2) {
+                scrollContainer.scrollLeft = 0;
+            }
+        }
+        requestAnimationFrame(scrollMarcas);
+    }
+
+    scrollMarcas();
+
+    let isUserInteracting = false;
+    let startX, scrollLeft;
+
+    scrollContainer.addEventListener("mousedown", (e) => {
+        isUserInteracting = true;
+        animationActive = false;
+        startX = e.pageX - scrollContainer.offsetLeft;
+        scrollLeft = scrollContainer.scrollLeft;
+    });
+
+    scrollContainer.addEventListener("mouseleave", () => {
+        isUserInteracting = false;
+        animationActive = true;
+    });
+
+    scrollContainer.addEventListener("mouseup", () => {
+        isUserInteracting = false;
+        animationActive = true;
+    });
+
+    scrollContainer.addEventListener("mousemove", (e) => {
+        if (!isUserInteracting) return;
+        e.preventDefault();
+        const x = e.pageX - scrollContainer.offsetLeft;
+        const walk = (x - startX) * 2;
+        scrollContainer.scrollLeft = scrollLeft - walk;
+    });
+
+    scrollContainer.addEventListener("wheel", () => {
+        animationActive = false;
+        setTimeout(() => animationActive = true, 100);
+    });
+
+    scrollContainer.addEventListener("touchstart", () => {
+        animationActive = false;
+    });
+
+    scrollContainer.addEventListener("touchend", () => {
+        setTimeout(() => animationActive = true, 100);
+    });
+
+    scrollContainer.addEventListener("touchmove", () => {});
+}
+
+let currentIndex = 0;
+const productos = document.getElementById("productos");
+const puntos = document.querySelectorAll(".punto");
+
+function updateCarrusel() {
+    productos.style.transform = `translateX(-${currentIndex * 25}%)`;
+    puntos.forEach(p => p.classList.remove("activo"));
+    puntos[currentIndex].classList.add("activo");
+}
+
+puntos.forEach(punto => {
+    punto.addEventListener("click", () => {
+        currentIndex = parseInt(punto.getAttribute("data-index"));
+        updateCarrusel();
+    });
+});
+

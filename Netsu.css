@@ -1,0 +1,486 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.intro {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    margin-bottom: -1%;
+    padding-bottom: 0;
+}
+
+.video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    z-index: 1; 
+    max-width: 100%;
+}
+
+.markers {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.7% 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    z-index: 100;
+    height: 12.5%;
+}
+
+.menu {
+    width: 2.5%;
+    height: auto;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    left: 1.5rem;
+    top: 2rem;
+}
+
+.menu img {
+    object-fit: contain;
+    width: 70%;
+    height: auto;
+}
+
+.menu:hover {
+    opacity: 0.7;
+}
+
+.buscar {
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    display: flex;
+    left: 8.5%;
+    background-color: #00ffff;
+    align-items: center;
+}
+
+.buscar:hover {
+    opacity: 0.7;
+}
+
+.buscar img {
+    width:75%;
+    height: auto;
+}
+
+.buscar p {
+    font-size: 10pt;
+    padding-left: 19%;
+    padding-top: 6%;
+    color: white;
+}
+
+.Netsu-logo {
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    display: flex;
+    left: 50%;
+    top: 30%;
+    transform: translateX(-50%);
+    width: 12.5%;
+}
+
+.location img {
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    display: flex;
+    right: 12%;
+    top: 62%;
+    width: 1.35%;
+    height: 1.35rem;
+}
+
+.phone img {
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    display: flex;
+    right: 8.8%;
+    top: 60%;
+    width: 1.8%;
+}
+
+.user img {
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    display: flex;
+    right: 6%;
+    top: 62%;
+    width: 1.6%;
+    height: 1.5rem;
+}
+
+.presentacion {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-97.5%, -50%);
+    z-index: 10;
+    text-align: center;
+    color: white;
+    font-family: 'Trebuchet MS', sans-serif;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+    animation: entrada-desde-izq 1s ease-out forwards;
+}
+
+@keyframes entrada-desde-izq {
+    from {
+        transform: translate(-180%, -100%);
+        opacity: 0;
+    }
+    to {
+        transform: translate(-97.5%, -50%);
+        opacity: 1;
+    }
+}
+
+
+.presentacion h1 {
+    font-size: 250%;
+    margin-bottom: 1rem;
+}
+
+.cps {
+    color: #2acfde;
+}
+
+.presentacion p {
+    font-size: 175%;
+    color: #2acfde;
+}   
+
+#rotador-js {
+    transition: opacity 1s ease;
+    color: #ffffff;
+}
+
+.carrusel {
+    border-top: 0;
+    margin-top: 0;
+    width: 100%;
+    background: #c1c8c7;
+    padding: 1.2% 0;
+    overflow: hidden;
+}
+
+.marcas-scroll {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+    scrollbar-width: none;
+}
+
+.marcas-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.contenedor-marcas {
+    display: flex;
+    gap: 2rem;
+    width: max-content;
+    white-space: nowrap;
+}
+
+.contenedor-marcas img {
+    width: 8.5%;
+    height: auto;
+    object-fit: contain;
+    padding: 10px;
+    background: #c1c8c7;
+    cursor: pointer;
+}
+
+.contenedor-marcas img {
+    transition: transform 0.25s ease-in-out;
+}
+
+.contenedor-marcas img:hover {
+    transform: scale(1.2);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+.todo {
+    height: 60vw;
+    background-color: #ffffff;
+}
+
+.destacado {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    height: 60vw;
+    background-color: #ffffff;
+    border-bottom: 2px solid;
+}
+
+.productos-carrusel {
+    margin-top: -1%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100vw;
+    overflow: hidden;
+    height: 50vw;
+}
+
+.productos-wrapper {
+    overflow: hidden;
+    width: 100vw;
+}
+
+.productos {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+    width: 200vw;
+}
+
+.producto-destacado {
+    width: 50vw;
+    height: 100%;
+    display: flex;
+    justify-content: center;  
+    align-items: center;    
+    flex-direction:column;    
+    background-color: #ffffff;
+}
+
+.producto{
+    width: 50%;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.producto img, .foto img {
+    width: 97.5%;
+    height: auto;
+
+}
+
+.refe {
+    width: 100%;  
+    height: 100%;  
+    background-color: #ffffff;
+    border: none;
+    cursor: pointer;
+}
+
+.refe img {
+    width: 100%;
+    height: 59.9vw;
+}
+
+.Texto {
+    margin-top: 8%;
+    color: rgb(120, 120, 120);
+}
+
+.Texto h1 {
+    margin-bottom: 9% ;
+    color: black;
+    font-weight: 100;
+    font-style: italic;
+    font-size: 1.5rem;
+}
+
+.Texto p {
+    margin-bottom: 5%;
+}
+
+.indicadores {
+    position: absolute;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin-left: 4%;
+    margin-top: -7.5%;
+}
+
+.punto {
+    width: 0.4rem;
+    height: 0.4rem;
+    border-radius: 50%;
+    background-color: #9dc2d0;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.punto.activo {
+    background-color: #00ffff;
+}
+
+.punto:hover {
+    background-color:rgb(192, 248, 255);
+}
+
+.adic {
+    margin-top: -10%;
+    width: 80%;
+    margin-left: 19.4%;
+}
+
+.mas{
+    width: 12.5%;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-top: -10%;
+    background-color:#ffffff;
+}
+
+.mas p {
+    margin-left: 10%;
+    color: rgb(120, 120, 120);
+    font-weight: 300;
+}
+
+.mas hr {
+    width: 76%;
+    height:min-content;
+    margin-left: 17.25%;
+    margin-top: 5%;
+}
+
+.mas:hover {
+    opacity: 0.8;
+    transform: scale(1.01);
+}
+
+.eventos {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 0rem;
+    border-bottom: 2px solid;
+    scroll-behavior: smooth;
+    height: 100vh;
+    width: 99vw;
+}
+
+.eventos::-webkit-scrollbar {
+    display: none;
+}
+.eventos {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+}
+
+.slide {
+    flex: 0 0 100%;
+    scroll-snap-align: center;
+    overflow: hidden;
+    position: relative;
+    color: white;
+    font-family: 'Trebuchet MS', sans-serif;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+.evento {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 2;
+    text-align: center;
+}
+
+
+.evento img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(60%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.evento h1 {
+    position: relative;
+    z-index: 2;
+    font-size: 2.8rem;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+}
+
+.evento p {
+    position: relative;
+    z-index: 2;
+    margin: 1.5rem auto;
+    text-align: center;
+    padding: 0 10%;
+    font-size: 1.1rem;
+    color: #e0e0e0;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.info {
+    position: absolute;
+    bottom: 8%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    display: flex;
+    justify-content: space-evenly;
+    color: white;
+    z-index: 3;
+    background: rgba(0,0,0,0.4);
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.col p {
+    font-weight: bold;
+    font-size: 1.25rem;
+    margin: 0;
+}
+
+.col h2 {
+    font-weight: normal;
+    margin: 0.5rem 0 0;
+}
+
+
