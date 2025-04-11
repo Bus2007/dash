@@ -592,3 +592,14 @@ button:hover .contenido p {
     color: #ffffff;
 }
 
+.pie-de-pagina {
+    background-color: #9fa9aa;
+    height: 50vh;
+    width: 99vw;
+    z-index: 1;
+    
+}
+
+.info {
+    z-index: 2;
+}
