@@ -1,17 +1,35 @@
-const frases = ["Clientes Mayoristas", "tu Negocio", "tu Evento", "Clientes Corporativos"];
+const frases = ["Pro A/V", "IT cómputo", "Consumo", "Servicios de Valor"];
 let index = 0;
+let charIndex = 0;
 const rotador = document.getElementById("rotador-js");
 
-if (rotador) {
-    setInterval(() => {
-        rotador.style.opacity = 0;
-        setTimeout(() => {
-            index = (index + 1) % frases.length;
-            rotador.textContent = frases[index];
-            rotador.style.opacity = 1;
-        }, 300);
-    }, 3000);
+function escribirFrase() {
+    if (!rotador) return;
+
+    if (charIndex <= frases[index].length) {
+        rotador.textContent = frases[index].substring(0, charIndex);
+        charIndex++;
+        setTimeout(escribirFrase, 40);
+    } else {
+        setTimeout(borrarFrase, 1000);
+    }
 }
+
+function borrarFrase() {
+    if (!rotador) return;
+
+    if (charIndex > 0) {
+        rotador.textContent = frases[index].substring(0, charIndex - 1);
+        charIndex--;
+        setTimeout(borrarFrase, 50);
+    } else {
+        index = (index + 1) % frases.length;
+        setTimeout(escribirFrase, 500);
+    }
+}
+
+escribirFrase();
+
 
 const scrollContainer = document.getElementById("marcas-scroll");
 const marcas = document.getElementById("contenedor-marcas");
@@ -94,4 +112,8 @@ puntos.forEach(punto => {
         updateCarrusel();
     });
 });
+
+
+
+
 
