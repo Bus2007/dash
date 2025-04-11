@@ -507,54 +507,75 @@
     grid-template-columns: repeat(2, 1fr);
     width: 92.5vw;
     margin: auto;
-    margin-top: 2.5%;
-    margin-bottom: 2.5%;
+    margin-top: 4%;
+    margin-bottom: 4%;
     border: 1px solid black;
     padding: 0;
 }
 
 .elemento {
     display: flex;
-    border: none;
     flex-direction: column;
     justify-content: center;
     font-family: sans-serif;
     height: 15rem;
-    }
+    border: none;
+}
+
+.elemento button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+    border: 1px solid black;
+    border-left: none;
+    border-top: none;
+    background-color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.25s ease, color 0.1s ease;
+    text-align: left;
+}
+
+.elemento button:hover {
+    background-color: black;
+    color: white;
+}
+
+.icono {
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.icono img {
+    width: 95%;
+    height: 2.8rem;
+}
+
+.icono img:nth-child(2) {
+    display: none;
+}
+
+button:hover .icono img:nth-child(1) {
+    display: none;
+}
+
+button:hover .icono img:nth-child(2) {
+    display: block;
+}
 
 
-    .elemento button {
-        width: 100%;
-        height: 100%;
-        border: 1px solid black;
-        border-left: none;
-        border-top: none;
-        padding: 40px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        text-align: left;
-        font-family: sans-serif;
-        background-color: #ffffff;
-        cursor: pointer;
-        transition: background-color 0.25s ease, color 0.1s ease;
-    }
-    
-    .elemento button:hover {
-        background-color: black;
-        color: white;
-    }
-
-
-
-.elemento h3 {
+.contenido h3 {
     font-size: 1.5em;
     font-weight: bold;
     margin: 0;
 }
 
-.elemento p {
+.contenido p {
     margin: 0;
-    color: #555;
+    color: #848484;
+    padding: 1% 0;
 }
+
 
