@@ -194,9 +194,32 @@
 }
 
 .todo {
+    position: relative;
     height: 60vw;
-    background-color: #ffffff;
     width: 100vw;
+    overflow: hidden;
+    background: none;
+}
+
+.fondo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("IMG/bg.jpg"); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0.25;
+}
+
+.todo > .destacado,
+.todo > .mov,
+.todo > *:not(.fondo) {
+    z-index: 1;
 }
 
 .destacado {
@@ -204,7 +227,7 @@
     flex-direction: row;
     align-items:center;
     height: 60vw;
-    background-color: #ffffff;
+    background: none;
 }
 
 .productos-carrusel {
@@ -214,11 +237,13 @@
     width: 100vw;
     overflow: hidden;
     height: 40vw;
+    background: none
 }
 
 .productos-wrapper {
     overflow: hidden;
     width: 100vw;
+    background: none;
 }
 
 .productos {
@@ -233,7 +258,7 @@
     display: flex; 
     align-items: center;    
     flex-direction:column;    
-    background-color: #ffffff;
+    background: none;
 }
 
 .producto{
@@ -290,15 +315,22 @@
 }
 
 .mov {
-    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40vw; 
+    width: 100%;
+    position: absolute;
+    background-color: none;
 }
+
 
 .indicadores {
     position: absolute;
     display: flex;
     gap: 0.5rem;
     margin-top: -7.5%;
-    margin-left: 4%;
     z-index: 10;
 }
 
@@ -327,23 +359,21 @@
 }
 
 .mas{
-    width: 12.5%;
+    width: auto;
     background: none;
     border: none;
     cursor: pointer;
-    background-color:#ffffff;
+    background-color:#ffffff00;
 }
 
 .mas p {
-    margin-left: 10%;
     color: rgb(106, 106, 106);
     font-weight: 300;
 }
 
 .mas hr {
-    width: 700%;
+    width: 100%;
     height:1px;
-    margin-left: 17.25%;
     margin-top: 5%;
 }
 
@@ -364,7 +394,7 @@
     margin-top: 0;
     width: 100%;
     background: #2acfde;
-    padding: 1.2% 0;
+    padding: 1% 0;
     overflow: hidden;
 }
 
@@ -375,6 +405,7 @@
     -webkit-overflow-scrolling: touch   ;
     width: 100%;
     scrollbar-width:none;
+    border: none;
 }
 
 .marcas-scroll::-webkit-scrollbar {
@@ -382,6 +413,7 @@
 }
 
 .contenedor-marcas {
+    border: none;
     display: flex;
     gap: 2rem;
     width: max-content;
