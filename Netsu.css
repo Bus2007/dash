@@ -27,26 +27,25 @@
 .markers {
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
     position: fixed;
-    top: 0;
     left: 0;
     width: 100%;
-    padding: 1.7% 0;
     text-align: center;
     display: flex;
     align-items: center;
     z-index: 100;
     height: 12.5%;
+    justify-content: end;
+    background-color: #00000000;
 }
 
 .menu {
-    width: 2.5%;
+    width: 2.2%;
     height: auto;
     background: none;
     border: none;
     cursor: pointer;
     position: absolute;
     left: 1.5rem;
-    top: 2rem;
 }
 
 .menu img {
@@ -94,45 +93,51 @@
     position: absolute;
     display: flex;
     left: 50%;
-    top: 30%;
     transform: translateX(-50%);
     width: 12.5%;
 }
 
 
-.location img {
+.location {
+    width: 2.5%;
+    height: 29%;
     background: none;
     border: none;
+    margin-right: 0.5%;
     cursor: pointer;
-    position: absolute;
-    display: flex;
-    right: 12%;
-    top: 62%;
-    width: 1.35%;
-    height: 1.35rem;
+}
+
+.location img {
+    height: 90%;
+    width: 60%;
+}
+
+.phone {
+    width: 2.5%;
+    height: 29%;
+    background: none;
+    border: none;
+    margin-right: 0.5%;
+    cursor: pointer;
 }
 
 .phone img {
+    height: 110%;
+    width: 75%;
+}
+
+.user {
+    width: 2.5%;
+    height: 29%;
     background: none;
     border: none;
+    margin-right: 2.5%;
     cursor: pointer;
-    position: absolute;
-    display: flex;
-    right: 8.8%;
-    top: 60%;
-    width: 1.8%;
 }
 
 .user img {
-    background: none;
-    border: none;
-    cursor: pointer;
-    position: absolute;
-    display: flex;
-    right: 6%;
-    top: 62%;
-    width: 1.6%;
-    height: 1.5rem;
+    height: 100%;
+    width: 75%;
 }
 
 .presentacion {
@@ -187,6 +192,11 @@
     font-weight: 600;
 }
 
+.marcas-destacadas {
+    width: 99vw;
+    height: 100vh;
+}
+
 .todo {
     height: 60vw;
     background-color: #ffffff;
@@ -201,14 +211,13 @@
 }
 
 .productos-carrusel {
-    margin-top: -1%;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     width: 100vw;
     overflow: hidden;
-    height: 50vw;
+    height: 40vw;
 }
 
 .productos-wrapper {
@@ -247,7 +256,12 @@
 .producto img, .foto img {
     width: 97.5%;
     height: auto;
+    transition: transform 0.25s ease-in-out;
+}
 
+.producto:hover img {
+    transform: scale(1.05);
+    animation: 10s ease-in-out;
 }
 
 .refe {
@@ -328,22 +342,29 @@
 }
 
 .mas hr {
-    width: 76%;
-    height:min-content;
+    width: 75%;
+    height:1px;
     margin-left: 17.25%;
     margin-top: 5%;
 }
 
 .mas:hover {
-    opacity: 0.8;
-    transform: scale(1.01);
+    transform: scale(1.02);
+}
+
+.mas:hover p {
+    color: #000000;
+}
+
+.mas:hover hr {
+    border-color: #000000;
 }
 
 .carrusel {
     border-top: 0;
     margin-top: 0;
     width: 100%;
-    background: #95ede0;
+    background: #2acfde;
     padding: 1.2% 0;
     overflow: hidden;
 }
@@ -352,9 +373,9 @@
     display: flex;
     overflow-x: auto;
     scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
+    -webkit-overflow-scrolling: touch   ;
     width: 100%;
-    scrollbar-width: none;
+    scrollbar-width:none;
 }
 
 .marcas-scroll::-webkit-scrollbar {
@@ -373,7 +394,7 @@
     height: auto;
     object-fit: contain;
     padding: 10px;
-    background: #95ede0;
+    background: #2acfde;
     cursor: pointer;
 }
 
@@ -530,14 +551,15 @@
 }
 
 .elemento button {
+    border: 1px solid black;
     display: flex;
     flex-direction: row;
     align-items: start;
     width: 100%;
     height: 100%;
+    min-height: 15rem;
     padding-left: 7.5%;
     padding-top: 5% ;
-    border: 1px solid black;
     border-left: none;
     border-top: none;
     background-color: #ffffff;
@@ -549,6 +571,11 @@
 .elemento button:hover {
     background-color: #000000;
     color: white;
+}
+
+.elemento:nth-child(1) .contenido {
+    column-count: 2;
+    column-gap: 2rem;
 }
 
 .icono {
@@ -572,7 +599,7 @@ button:hover .icono img:nth-child(1) {
 }
 
 button:hover .icono img:nth-child(2) {
-    display: block;
+    display:block;
 }
 
 .contenido h3 {
@@ -593,13 +620,7 @@ button:hover .contenido p {
 }
 
 .pie-de-pagina {
-    background-color: #9fa9aa;
-    height: 50vh;
     width: 99vw;
-    z-index: 1;
-    
-}
-
-.info {
-    z-index: 2;
+    height: 55vh;
+    background-color: #0bebeb;
 }
