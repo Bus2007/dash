@@ -515,7 +515,8 @@
         font-size: 1.25rem;
         margin-top: 0.5rem;
     }
-    @media (max-width: 768px) {
+    
+    @media (max-width: 600px) {
         .evento h1 {
             font-size: 2rem;
         }
@@ -538,13 +539,13 @@
             font-size: 1rem;
         }
     }
-    @media (max-width: 480px) {
+  @media (max-width: 480px) {
         .evento h1 {
             font-size: 1.5rem;
         }
     
         .evento p {
-            font-size: 0.95rem;
+            font-size: 1rem;
         }
     
         .info {
@@ -561,147 +562,142 @@
         }
     }
 
-    .sec5 h1 {
-        text-align: center;
-        margin-top: 2.5%;
-        font-size: 2.5rem;
-        color: #0bebeb; 
-    }
-    
-    .categorias-netsu {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap:0;
-        width: 92.5vw;
-        margin: 2.5% auto 4%;
-        padding: 0;
-    }
-    
-    .elemento {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        font-family: sans-serif;
-        height: auto;
-        border: none;
-    }
-    
-    .elemento button {
-        border: 1px solid black;
-        display: flex;
-        flex-direction: row;
-        align-items: start;
-        width: 100%;
-        padding: 1.5rem;
-        background-color: #ffffff;
-        cursor: pointer;
-        transition: background-color 0.25s ease, color 0.1s ease;
-        text-align: left;
-        min-height: 15rem;
-    }
-    
-    .elemento button:hover {
-        background-color: #000000;
-        color: white;
-    }
-    
-    .elemento:nth-child(1) .contenido {
-        column-count: 2;
-        column-gap: 2rem;
-    }
-    
-    .icono {
-        width: 60px;
-        margin-right: 1rem;
-        flex-shrink: 0;
-        height: auto;
-    }
-    
-    .icono img {
-        width: 100%;
-        height: auto;
-    }
-    
-    .icono img:nth-child(2) {
-        display: none;
-    }
-    
-    button:hover .icono img:nth-child(1) {
-        display: none;
-    }
-    
-    button:hover .icono img:nth-child(2) {
-        display: block;
-    }
-    
-    .contenido h3 {
-        font-size: 1.5rem;
-        font-weight: bolder;
-        margin: 0;
-    }
-    
-    .contenido p {
-        margin: 0;
-        color: #5a5959;
-        padding-top: 0.5rem;
-        font-size: 0.95rem;
-    }
-    
-    button:hover .contenido p {
-        color: #ffffff;
-    }
-    
-    @media screen and (max-width: 875px) {
-        .categorias-netsu {
-            grid-template-columns: 1fr;
-            gap: 0.5rem;
-        }
-    
-        .elemento button {
-            flex-direction: column;
-            align-items: flex-start;
-            padding: 1rem;
-        }
-    
-        .icono {
-            width: 3rem;
-            margin-bottom: 1rem;
-        }
-    
-        .contenido h3 {
-            font-size: 1.25rem;
-        }
-    
-        .contenido p {
-            font-size: 0.9rem;
-        }
-    
-        .elemento:nth-child(1) .contenido {
-            column-count: 1;
-        }
-    }
-    
-    @media screen and (max-width: 576px) {
-        .sec5 h1 {
-            font-size: 2rem;
-        }
-    
-        .contenido h3 {
-            font-size: 1.1rem;
-        }
-    
-        .contenido p {
-            font-size: 0.85rem;
-        }
-    
-        .icono {
-            width: 2.5rem;
-        }
-    }
-    
-.pie-de-pagina {
-    width: 99vw;
-    height: 55vh;
-    background-color: #0bebeb;
+.sec5 h1 {
+    text-align: center;
+    margin-top: 2.5%;
+    font-size: 2.5rem;
+    color: #0bebeb; 
 }
 
+.categorias-netsu {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+    width: 92.5vw;
+    margin: 2.5% auto 4%;
+    padding: 0;
+    border: 1px solid black
+}
+
+.elemento {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: sans-serif;
+    height: auto;
+    border: none;
+}
+
+.elemento button {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    width: 100%;
+    padding: 1.5rem;
+    background-color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.25s ease, color 0.1s ease;
+    text-align: left;
+    min-height: 15rem;
+}
+
+.elemento button:hover {
+    background-color: #000000;
+    color: white;
+}
+
+.elemento:nth-child(1) .contenido {
+    column-count: 2;
+    column-gap: 2rem;
+}
+
+.icono {
+    width: 60px;
+    margin-right: 1rem;
+    flex-shrink: 0;
+    height: auto;
+}
+
+.icono img {
+    width: 100%;
+    height: auto;
+}
+
+.icono img:nth-child(2) {
+    display: none;
+}
+
+button:hover .icono img:nth-child(1) {
+    display: none;
+}
+
+button:hover .icono img:nth-child(2) {
+    display: block;
+}
+
+.contenido h3 {
+    font-size: 1.5rem;
+    font-weight: bolder;
+    margin: 0;
+}
+
+.contenido p {
+    margin: 0;
+    color: #5a5959;
+    padding-top: 0.5rem;
+    font-size: 0.95rem;
+}
+
+button:hover .contenido p {
+    color: #ffffff;
+}
+
+@media screen and (max-width: 875px) {
+    .categorias-netsu {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+        border: none;
+    }
+
+    .elemento button {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+    }
+
+    .icono {
+        width: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    .contenido h3 {
+        font-size: 1.25rem;
+    }
+
+    .contenido p {
+        font-size: 0.9rem;
+    }
+
+    .elemento:nth-child(1) .contenido {
+        column-count: 1;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .sec5 h1 {
+        font-size: 2rem;
+    }
+
+    .contenido h3 {
+        font-size: 1.1rem;
+    }
+
+    .contenido p {
+        font-size: 0.85rem;
+    }
+
+    .icono {
+        width: 2.5rem;
+    }
+}
