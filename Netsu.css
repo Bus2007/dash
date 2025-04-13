@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scrollbar-width: none;
 }
 
 .intro {
@@ -193,7 +194,7 @@
 }
 
 .marcas-destacadas {
-    width: 99vw;
+    width: 100vw;
     height: 100vh;
 }
 
@@ -201,6 +202,7 @@
     height: 60vw;
     background-color: #ffffff;
     justify-content: center;
+    width: 100vw;
 }
 
 .destacado {
