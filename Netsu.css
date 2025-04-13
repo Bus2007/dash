@@ -193,22 +193,16 @@
     font-weight: 600;
 }
 
-.marcas-destacadas {
-    width: 100vw;
-    height: 100vh;
-}
-
 .todo {
     height: 60vw;
     background-color: #ffffff;
-    justify-content: center;
     width: 100vw;
 }
 
 .destacado {
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    align-items:center;
     height: 60vw;
     background-color: #ffffff;
 }
@@ -216,7 +210,6 @@
 .productos-carrusel {
     display: flex;
     align-items: center;
-    justify-content: center;
     position: relative;
     width: 100vw;
     overflow: hidden;
@@ -231,21 +224,20 @@
 .productos {
     display: flex;
     transition: transform 0.3s ease-in-out;
-    width: 200vw;
+    width: 400vw;
 }
 
 .producto-destacado {
-    width: 50vw;
+    width: 100vw;
     height: 100%;
-    display: flex;
-    justify-content: center;  
+    display: flex; 
     align-items: center;    
     flex-direction:column;    
     background-color: #ffffff;
 }
 
 .producto{
-    width: 50%;
+    width: 40%;
     background: none;
     border: none;
     padding: 0;
@@ -257,7 +249,7 @@
 }
 
 .producto img, .foto img {
-    width: 97.5%;
+    width: 30vw;
     height: auto;
     transition: transform 0.25s ease-in-out;
 }
@@ -297,13 +289,17 @@
     margin-bottom: 5%;
 }
 
+.mov {
+    
+}
+
 .indicadores {
     position: absolute;
     display: flex;
-    align-items: self-end;
     gap: 0.5rem;
     margin-top: -7.5%;
     margin-left: 4%;
+    z-index: 10;
 }
 
 .punto {
@@ -326,7 +322,8 @@
 .adic {
     margin-top: -10%;
     width: 80%;
-    margin-left: 19.4%;
+    margin-left: 44.2%;
+    align-items: start;
 }
 
 .mas{
@@ -344,7 +341,7 @@
 }
 
 .mas hr {
-    width: 75%;
+    width: 700%;
     height:1px;
     margin-left: 17.25%;
     margin-top: 5%;
