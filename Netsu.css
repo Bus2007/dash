@@ -728,15 +728,40 @@
     display: none;
 }
 
+.carousel-container {
+    position: relative;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.eventos {
+    display: flex;
+    gap: 0;
+    border-bottom: 2px solid;
+    scroll-behavior: smooth;
+    height: 95vh;
+    width: 100vw; 
+    cursor: default;
+    -ms-overflow-style: none;
+    scrollbar-width: thin;
+    transform: translateX(0%);
+    transition: transform 0.3s ease-in;
+}
+
+.eventos::-webkit-scrollbar {
+    display: none;
+}
+
 .slide {
     flex: 0 0 100%;
-    scroll-snap-align: center;
+    width: 100vw;
     overflow: hidden;
     position: relative;
     color: white;
     font-family: 'Trebuchet MS', sans-serif;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
 }
+
 
 .evento {
     display: flex;
@@ -847,6 +872,11 @@
     right: 10px;
 }
 
+.arrow.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
 .arrow svg {
     width: 2em;
     height: 2em;
@@ -897,7 +927,6 @@
         font-size: 0.95rem;
     }
 }
-
 .sec5 h1 {
     text-align: center;
     margin-top: 2.5%;

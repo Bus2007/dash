@@ -206,3 +206,4 @@ puntos.forEach(punto => {
         updateCarrusel();
     });
 });
+
