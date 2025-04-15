@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    scrollbar-width: none;
+    scrollbar-width: thin;
 }
 
 .intro {
@@ -78,6 +78,7 @@
     align-items: center;
     gap: 35%;
     transition: color 0.25s ease-in-out; 
+    cursor: pointer;
 }
 
 .nav-link i {
