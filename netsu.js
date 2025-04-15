@@ -31,6 +31,35 @@ window.addEventListener('scroll', function() {
     prevScrollPos = currentScrollPos;
 });
 
+const menuToggle = document.getElementById('menu-toggle');
+const slideMenu = document.getElementById('slide-menu');
+const overlay = document.getElementById('overlay');
+const closeMenuBtn = document.getElementById('close-menu-btn');
+
+menuToggle.addEventListener('click', function(event) {
+    event.preventDefault();
+    slideMenu.classList.toggle('open');
+    overlay.classList.toggle('open');
+});
+
+closeMenuBtn.addEventListener('click', function() {
+    slideMenu.classList.remove('open');
+    overlay.classList.remove('open');
+});
+
+document.addEventListener('click', function(event) {
+    if (slideMenu.classList.contains('open') && !event.target.closest('.slide-menu') && event.target !== menuToggle && !event.target.closest('#mainNav')) {
+        slideMenu.classList.remove('open');
+        overlay.classList.remove('open');
+    }
+});
+
+overlay.addEventListener('click', function() {
+    slideMenu.classList.remove('open');
+    overlay.classList.remove('open');
+});
+
+
 const frases = ["Pro A/V", "IT cómputo", "Consumo", "Servicios de Valor"];
 let index = 0;
 let charIndex = 0;

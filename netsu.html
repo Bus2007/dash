@@ -13,10 +13,23 @@
 <body>
     <div class="header">
             <div class="intro">
+                <div class="slide-menu" id="slide-menu">
+                    <button id="close-menu-btn">
+                        <i class='bx bx-x'></i>Cerrar
+                    </button>
+                    <ul>
+                        <li><a href="#">Catalogo</a></li>
+                        <li><a href="#">Marcas</a></li>
+                        <li><a href="#">Opción 3</a></li>
+                    </ul>
+                </div>
+                
+                <div class="overlay" id="overlay"></div>
+
                 <div class="markers">
                     <div class="sidebar" id="mainNav">
                         <div class="seccion-1-sidebar"> 
-                            <a class="nav-link">
+                            <a class="nav-link" id="menu-toggle">
                                 <span class="item-icon original"><i class='bx bx-menu-alt-left' style='color:#ffffff' ></i></span>
                                 <span class="item-icon alternative hidden"><i class='bx bx-menu-alt-left' style='color:#000000' ></i></span>
                             </a>
@@ -153,81 +166,89 @@
         </div>
     </div>
 
-    <div class="eventos" id="carrusel-eventos">
-        <div class="slide">
-            <div class="evento">
-                <img src="IMG/cop16.jpg" alt="">
-                <h1>COP16</h1>
-                <p>
-                    Es el encuentro global donde el mundo se une para proteger la biodiversidad, frenar la pérdida de especies y construir un futuro sostenible.
-                    Lo que se decida aquí marcará el rumbo de nuestro planeta.
-                </p>
+    <div class="carousel-container">
+        <div class="eventos" id="carrusel-eventos">
+            <div class="slide">
+                <div class="evento">
+                    <img src="IMG/cop16.jpg" alt="">
+                    <h1>COP16</h1>
+                    <p>
+                        Es el encuentro global donde el mundo se une para proteger la biodiversidad, frenar la pérdida de especies y construir un futuro sostenible.
+                        Lo que se decida aquí marcará el rumbo de nuestro planeta.
+                    </p>
+                </div>
+                <div class="info">
+                    <div class="col">
+                        <p>País</p>
+                        <h2>Colombia</h2>
+                    </div>
+                    <div class="col">
+                        <p>Asistencia</p>
+                        <h2>25,000</h2>
+                    </div>
+                    <div class="col">
+                        <p>Productos</p>
+                        <h2>150+</h2>
+                    </div>
+                </div>
             </div>
-            <div class="info">
-                <div class="col">
-                    <p>País</p>
-                    <h2>Colombia</h2>
-                </div>
-                <div class="col">
-                    <p>Asistencia</p>
-                    <h2>25,000</h2>
-                </div>
-                <div class="col">
-                    <p>Productos</p>
-                    <h2>150+</h2>
-                </div>
-            </div>
-        </div>
     
-        <div class="slide">
-            <div class="evento">
-                <img src="IMG/cop16.jpg" alt="">
-                <h1>COP16</h1>
-                <p>
-                    Es el encuentro global donde el mundo se une para proteger la biodiversidad, frenar la pérdida de especies y construir un futuro sostenible.
-                    Lo que se decida aquí marcará el rumbo de nuestro planeta.
-                </p>
+            <div class="slide">
+                <div class="evento">
+                    <img src="IMG/cop16.jpg" alt="">
+                    <h1>COP16</h1>
+                    <p>
+                        Es el encuentro global donde el mundo se une para proteger la biodiversidad, frenar la pérdida de especies y construir un futuro sostenible.
+                        Lo que se decida aquí marcará el rumbo de nuestro planeta.
+                    </p>
+                </div>
+                <div class="info">
+                    <div class="col">
+                        <p>País</p>
+                        <h2>Colombia</h2>
+                    </div>
+                    <div class="col">
+                        <p>Asistencia</p>
+                        <h2>25,000</h2>
+                    </div>
+                    <div class="col">
+                        <p>Productos</p>
+                        <h2>150+</h2>
+                    </div>
+                </div>
             </div>
-            <div class="info">
-                <div class="col">
-                    <p>País</p>
-                    <h2>Colombia</h2>
+    
+            <div class="slide">
+                <div class="evento">
+                    <img src="IMG/cop16.jpg" alt="">
+                    <h1>COP16</h1>
+                    <p>
+                        Es el encuentro global donde el mundo se une para proteger la biodiversidad, frenar la pérdida de especies y construir un futuro sostenible.
+                        Lo que se decida aquí marcará el rumbo de nuestro planeta.
+                    </p>
                 </div>
-                <div class="col">
-                    <p>Asistencia</p>
-                    <h2>25,000</h2>
-                </div>
-                <div class="col">
-                    <p>Productos</p>
-                    <h2>150+</h2>
+                <div class="info">
+                    <div class="col">
+                        <p>País</p>
+                        <h2>Colombia</h2>
+                    </div>
+                    <div class="col">
+                        <p>Asistencia</p>
+                        <h2>25,000</h2>
+                    </div>
+                    <div class="col">
+                        <p>Productos</p>
+                        <h2>150+</h2>
+                    </div>
                 </div>
             </div>
         </div>
-
-        <div class="slide">
-            <div class="evento">
-                <img src="IMG/cop16.jpg" alt="">
-                <h1>COP16</h1>
-                <p>
-                    Es el encuentro global donde el mundo se une para proteger la biodiversidad, frenar la pérdida de especies y construir un futuro sostenible.
-                    Lo que se decida aquí marcará el rumbo de nuestro planeta.
-                </p>
-            </div>
-            <div class="info">
-                <div class="col">
-                    <p>País</p>
-                    <h2>Colombia</h2>
-                </div>
-                <div class="col">
-                    <p>Asistencia</p>
-                    <h2>25,000</h2>
-                </div>
-                <div class="col">
-                    <p>Productos</p>
-                    <h2>150+</h2>
-                </div>
-            </div>
-        </div>
+        <button class="arrow prev" id="prev-evento">
+            <svg viewBox="0 0 24 24"><path fill="currentColor" d="M15.41 16.59L10.83 12L15.41 7.41L14 6L8 12L14 18L15.41 16.59Z"/></svg>
+        </button>
+        <button class="arrow next" id="next-evento">
+            <svg viewBox="0 0 24 24"><path fill="currentColor" d="M8.59 16.59L13.17 12L8.59 7.41L10 6L16 12L10 18L8.59 16.59Z"/></svg>
+        </button>
     </div>
 
     <div class="sec5" id="sec5">
@@ -280,6 +301,7 @@
                     <p>Video-Consumo</p>
                     <p>Audio-Consumo</p>
                     <p>Sistema de Cámaras</p>
+                    <p>Accesorios Consumo</p>
                 </div>
             </button>
         </div>
