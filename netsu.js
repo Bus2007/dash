@@ -1,3 +1,35 @@
+let prevScrollPos = window.pageYOffset;
+const mainNav = document.getElementById("mainNav");
+let isScrolledUp = false;
+
+window.addEventListener('scroll', function() {
+    const currentScrollPos = window.pageYOffset;
+    if (currentScrollPos > prevScrollPos && currentScrollPos > 50) {
+        mainNav.style.top = "-60px";
+        mainNav.classList.remove('scrolled-up');
+        mainNav.classList.remove('scrolled-up-icons');
+        isScrolledUp = false;
+    } else if (currentScrollPos < prevScrollPos && currentScrollPos > 0) {
+        mainNav.style.top = "0";
+        mainNav.classList.add('scrolled-up');
+        mainNav.classList.add('scrolled-up-icons');
+        isScrolledUp = true;
+    } else if (currentScrollPos === 0 && isScrolledUp) {
+        setTimeout(() => {
+            mainNav.classList.remove('scrolled-up');
+            mainNav.classList.remove('scrolled-up-icons');
+            isScrolledUp = false;
+        }, 150);
+        mainNav.style.top = "0";
+    } else if (currentScrollPos === 0) {
+        mainNav.style.top = "0";
+        mainNav.classList.remove('scrolled-up');
+        mainNav.classList.remove('scrolled-up-icons');
+        isScrolledUp = false;
+    }
+    prevScrollPos = currentScrollPos;
+});
+
 const frases = ["Pro A/V", "IT cómputo", "Consumo", "Servicios de Valor"];
 let index = 0;
 let charIndex = 0;
