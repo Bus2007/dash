@@ -4,10 +4,8 @@ let isScrolledUp = false;
 
 window.addEventListener('scroll', function() {
     const currentScrollPos = window.pageYOffset;
-    if (currentScrollPos > prevScrollPos && currentScrollPos > 50) {
-        mainNav.style.top = "-60px";
-        mainNav.classList.remove('scrolled-up');
-        mainNav.classList.remove('scrolled-up-icons');
+    if (currentScrollPos > prevScrollPos && currentScrollPos > 1) {
+        mainNav.style.top = "-12.5%";
         isScrolledUp = false;
     } else if (currentScrollPos < prevScrollPos && currentScrollPos > 0) {
         mainNav.style.top = "0";
@@ -19,13 +17,16 @@ window.addEventListener('scroll', function() {
             mainNav.classList.remove('scrolled-up');
             mainNav.classList.remove('scrolled-up-icons');
             isScrolledUp = false;
-        }, 150);
+        }, 1);
         mainNav.style.top = "0";
     } else if (currentScrollPos === 0) {
         mainNav.style.top = "0";
         mainNav.classList.remove('scrolled-up');
         mainNav.classList.remove('scrolled-up-icons');
         isScrolledUp = false;
+    } else if (currentScrollPos > 50 && isScrolledUp && currentScrollPos <= prevScrollPos) {
+        mainNav.classList.add('scrolled-up');
+        mainNav.classList.add('scrolled-up-icons');
     }
     prevScrollPos = currentScrollPos;
 });

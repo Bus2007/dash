@@ -28,6 +28,7 @@
 .markers {
     width: 100%;
     transition: top 0.4s ease-in-out;
+    background-color: transparent;
 }
 
 .sidebar {
@@ -35,17 +36,17 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
-    height: 10%;
+    height: 12.5%;
     width: 100%;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 999;
-    transition: top 0.25s ease-in-out, background-color 0.25s ease-in-out;
+    transition: top 0.1s ease-in-out, background-color 0.5s ease-out;
 }
 
 .sidebar.scrolled-up {
-    background-color: rgba(183, 183, 183, 0.256);
+    background-color: rgb(255, 255, 255);
 }
 
 .seccion-1-sidebar,
@@ -76,16 +77,21 @@
     display: flex;
     align-items: center;
     gap: 35%;
+    transition: color 0.25s ease-in-out; 
 }
 
 .nav-link i {
     font-size: 150%;
+    color: #ffffff;
+    transition: color 0.25s ease-in-out;
 }
 
 .nav-link p {
     margin: 0;
     font-size: 14px;
+    font-weight: 600;
     color: white;
+    transition: color 0.25s ease-in-out; 
 }
 
 .markers button {
@@ -100,10 +106,13 @@
 .markers img {
     width: 100%;
     height: auto;
+    transition: opacity 0.25s ease-in-out;
 }
 
 .alternative-text {
     display: none; 
+    color: black;
+    transition: color 0.25s ease-in-out;
 }
 
 .sidebar.scrolled-up-icons .nav-link .original-text {
@@ -112,18 +121,6 @@
 
 .sidebar.scrolled-up-icons .nav-link .alternative-text {
     display: block;
-}
-
-.nav-link {
-    transition: color 0.25s ease-in-out; 
-}
-
-.nav-link p {
-    color: white; 
-    transition: color 0.9s ease-in-out; 
-}
-
-.sidebar.scrolled-up-icons .nav-link .alternative-text {
     color: black; 
 }
 
@@ -762,7 +759,7 @@
             font-size: 1rem;
         }
     }
-  @media (max-width: 480px) {
+@media (max-width: 480px) {
         .evento h1 {
             font-size: 1.5rem;
         }
