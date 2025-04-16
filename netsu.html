@@ -13,19 +13,46 @@
 <body>
     <div class="header">
             <div class="intro">
+                <div id="overlay"></div>
+                <!--Menu desplegable-->
                 <div class="slide-menu" id="slide-menu">
                     <button id="close-menu-btn">
                         <i class='bx bx-x'></i>Cerrar
                     </button>
                     <ul>
-                        <li><a href="#">Catalogo</a></li>
+                        <li><a href="#" id="open-catalogo-btn">Catalogo</a></li>
                         <li><a href="#">Marcas</a></li>
-                        <li><a href="#">Opción 3</a></li>
+                        <li><a href="#">Que Necesitas</a></li>
+                        <li><a href="#">Que es Netsu</a></li>
+                    </ul>
+                    <ul>
+                        <a href="https://www.instagram.com/netsulatam/" target="_blank" aria-label="instagram">
+                            <span><i class='bx bxl-instagram' style='color:#000000'></i></span>
+                        </a>
+                        <a href="https://www.facebook.com/profile.php?id=100071067226520" target="_blank" aria-label="facebook">
+                            <span><i class='bx bxl-facebook' style='color:#000000'></i></span>
+                        </a>
                     </ul>
                 </div>
-                
+                <!--Submenu desplegable-->
+                <div class="slide-menu-catalogo" id="slide-menu-catalogo">
+                    <ul>
+                        <li><a href="#">Categoría 1</a></li>
+                        <li><a href="#">Categoría 2</a></li>
+                        <li><a href="#">Categoría 3</a></li>
+                        <li><a href="#">Categoría 4</a></li>
+                    </ul>
+                    <ul>
+                        <a href="https://www.instagram.com/netsulatam/" target="_blank" aria-label="instagram catalogo">
+                            <span><i class='bx bxl-instagram'></i></span>
+                        </a>
+                        <a href="https://www.facebook.com/profile.php?id=100071067226520" target="_blank" aria-label="facebook catalogo">
+                            <span><i class='bx bxl-facebook'></i></span>
+                        </a>
+                    </ul>
+                </div>
+                <!--Barra de Marcadores-->
                 <div class="overlay" id="overlay"></div>
-
                 <div class="markers">
                     <div class="sidebar" id="mainNav">
                         <div class="seccion-1-sidebar"> 
@@ -66,9 +93,10 @@
                 </div>
                 </div>
         </div>
-
+        <!--Carrusel Productos Destacados-->
         <div class="todo">
         <div class="fondo"></div>
+        <h1 class="titulo">Productos Destacados</h1>
         <div class="destacado">
             <div class="productos-carrusel">            
                 <div class="productos-wrapper">
@@ -133,8 +161,7 @@
             </div>
         </div>
     </div>
-
-    </div>
+    <!--Carrusel Infinito-->
     <video class="video" src="IMG/Christie-start.mp4" autoplay muted loop></video>
     <div class="carrusel" id="marcasCarrusel">
         <div class="marcas-scroll" id="marcas-scroll">
@@ -250,7 +277,7 @@
             <svg viewBox="0 0 24 24"><path fill="currentColor" d="M8.59 16.59L13.17 12L8.59 7.41L10 6L16 12L10 18L8.59 16.59Z"/></svg>
         </div>  
     </div>
-
+    <!--Etiquetas-->
     <div class="sec5" id="sec5">
     <h1>Encuentra</h1>
     <div class="categorias-netsu">

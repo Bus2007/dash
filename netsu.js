@@ -34,7 +34,7 @@ window.addEventListener('scroll', function() {
 const menuToggle = document.getElementById('menu-toggle');
 const slideMenu = document.getElementById('slide-menu');
 const overlay = document.getElementById('overlay');
-const closeMenuBtn = document.getElementById('close-menu-btn');
+const    closeMenuBtn = document.getElementById('close-menu-btn');
 
 menuToggle.addEventListener('click', function(event) {
     event.preventDefault();
@@ -59,6 +59,37 @@ overlay.addEventListener('click', function() {
     overlay.classList.remove('open');
 });
 
+
+document.addEventListener('DOMContentLoaded', () => {
+    const slideMenu = document.getElementById('slide-menu');
+    const slideMenuCatalogo = document.getElementById('slide-menu-catalogo');
+    const openCatalogoBtn = document.querySelector('#slide-menu ul li a[href="#"]');
+    const closeMenuBtn = document.getElementById('close-menu-btn');
+
+    function closeMenus() {
+        slideMenu.classList.remove('open', 'shifted');
+        slideMenuCatalogo.classList.remove('open');
+        document.removeEventListener('click', closeOnOutsideClick);
+    }
+    function closeOnOutsideClick(event) {
+        if (!slideMenu.contains(event.target) && !slideMenuCatalogo.contains(event.target) && event.target !== openCatalogoBtn) {
+            closeMenus();
+        }
+    }
+    if (openCatalogoBtn) {
+        openCatalogoBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            slideMenuCatalogo.classList.add('open');
+            slideMenu.classList.add('shifted');
+            document.addEventListener('click', closeOnOutsideClick);
+        });
+    }
+    if (closeMenuBtn) {
+        closeMenuBtn.addEventListener('click', () => {
+            closeMenus();
+        });
+    }
+});
 
 const frases = ["Pro A/V", "IT cómputo", "Consumo", "Servicios de Valor"];
 let index = 0;
