@@ -40,7 +40,7 @@ menuToggle.addEventListener('click', function(event) {
     event.preventDefault();
     slideMenu.classList.toggle('open');
     overlay.classList.toggle('open');
-});
+    });
 
 closeMenuBtn.addEventListener('click', function() {
     slideMenu.classList.remove('open');
@@ -90,6 +90,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+
 
 const frases = ["Pro A/V", "IT cómputo", "Consumo", "Servicios de Valor"];
 let index = 0;

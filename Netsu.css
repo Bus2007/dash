@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    scrollbar-width: thin;
+    scrollbar-width: none;
 }
 
 .intro {
@@ -172,7 +172,7 @@
     left: -50%;
     width: 25%;
     height: 100%;
-    background-color: #f0f0f0;
+    background-color: #ffffff;
     color: #333;
     z-index: 1000;
     transition: left 0.3s ease-in-out;
@@ -235,7 +235,7 @@
     left: -50%;
     width: 25%;
     height: 100%;
-    background-color: #f0f0f0;
+    background-color: #ffffff;
     color: black;
     z-index: 999;
     transition: left 0.25s ease-in-out;
@@ -279,6 +279,130 @@
     font-size: 24px;
 }
 
+.slide-contacto {
+    display: flex;
+    position: fixed;
+    right: -30%;
+    width: 29%;
+    height: 100%;
+    background-color: #ffffff;
+    color: #333;
+    z-index: 1000;
+    transition: left 0.3s ease-in-out;
+    box-sizing: border-box;
+    padding-top: 1.5%;;
+}
+
+.slide-contacto h3 {
+    justify-self: center;
+    font-weight: 400;
+    padding-top: 2.5%;
+}
+
+#cerrar-slide-contacto {
+    font-size: 2rem;
+    padding-left: 50%;
+    cursor: pointer;
+    font-weight:100;
+}
+
+.slide-contacto p {
+    justify-self: center;
+    padding-top: 10%;
+    padding-left: 10%;
+    padding-right: 10%;
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+
+.telefono-slide {
+    padding-top: 6%;
+    display: flex;
+    justify-content: center; 
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+
+.telefono-slide i {
+    font-size: 150%;
+    margin-right: 5px;
+    font-weight: 100;
+}
+
+.servicios-slide {
+    background-color: #f5f5f5;
+    justify-self: center;
+    width: 75%;
+    margin-top: 10%;
+    height: 18.5%;
+    align-content: center;
+    margin-bottom: 10%;
+}
+
+.servicios-slide li {
+    list-style:none;
+    justify-self: start;
+    margin: 0;
+    border: none;
+    display: flex;
+    align-items: center;
+    padding-left: 5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.servicios-slide li a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 0.8rem;
+    padding-left: 0.45rem;
+}
+
+.servicios-slide i {
+    font-size: 110%;
+    font-weight: 100;
+}
+
+.slide-contacto hr {
+    width: 75%;
+    justify-self: center;
+    border: 1px solid #f5f5f5;
+}
+
+.correo-slide {
+    padding-top: 9%;
+    display: flex;
+    justify-content: center; 
+    cursor: pointer;
+    font-weight: 100;
+    font-size: 0.9rem;
+    align-items: center;
+}
+
+.correo-slide i {
+    font-size: 1.2rem;
+    margin-right: 2.5%;
+    font-weight: 100;
+}
+
+.chat-slide {
+    padding-top: 12.5%;
+    display: flex;
+    justify-content: center; 
+    cursor: pointer;
+    font-weight: 100;
+    font-size: 0.9rem;
+    align-items: center;
+}
+
+.chat-slide i {
+    font-size: 1.1rem;
+    font-weight: 100;
+    margin-right: 2.5%;
+}
+
+
 .presentacion {
     display: block;
     position: absolute;
@@ -292,6 +416,7 @@
     text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
     animation: entrada-desde-izq 1s ease-out forwards;
 }
+
 
 @keyframes entrada-desde-izq {
     from {
@@ -368,6 +493,7 @@
 }
 
 .destacado {
+    margin-top:-3.5% ;
     display: flex;
     flex-direction: row;
     align-items:center;
@@ -451,7 +577,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    margin-top: 40vw; 
+    margin-top: 45vw; 
     width: 100%;
     position: absolute;
     background-color: none;
@@ -614,22 +740,22 @@
 @media screen and (min-width: 613px) and (max-width:1100px) {
 
     .todo {
-        height: 90vw;
+        height: 60vw;
     }
     .destacado {
-        padding-top: 10%;
+        margin-top: -3%;
     }
 
     .producto img {
-        transform: scale(120%);
+        transform: scale(100%);
     }
 
     .producto h1 {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     }
     
     .producto p {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     }
     
     .punto {
@@ -642,7 +768,7 @@
     }
 
     .mov {
-        margin-top: 60%;
+        margin-top: 52.5%;
     }
     .mov .indicadores {
         padding-bottom: 5%;
