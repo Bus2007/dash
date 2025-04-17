@@ -279,10 +279,53 @@
     font-size: 24px;
 }
 
+.slide-mapa {
+    display: flex;
+    position: fixed;
+    right: 0%;
+    width: 29%;
+    height: 100%;
+    background-color: #ffffff;
+    color: #333;
+    z-index: 1000;
+    transition: left 0.3s ease-in-out;
+    box-sizing: border-box;
+    padding-top: 1.5%;;
+    justify-content: center;
+}
+
+.slide-mapa iframe {
+    width: 100%;
+    height: 30%;
+}
+
+.slide-mapa h3 {
+    justify-self: center;
+    font-weight: 400;
+    padding-top: 15%;
+    padding-bottom: 15%;
+}
+
+.slide-mapa a {
+    text-decoration: none;
+    color: black;
+}
+
+.slide-mapa span {
+    padding-top: 15%;
+}
+
+#cerrar-slide-mapa {
+    font-size: 2rem;
+    justify-self: center;
+    cursor: pointer;
+    font-weight:100;
+}
+
 .slide-contacto {
     display: flex;
     position: fixed;
-    right: -30%;
+    right: 30%;
     width: 29%;
     height: 100%;
     background-color: #ffffff;
@@ -400,6 +443,11 @@
     font-size: 1.1rem;
     font-weight: 100;
     margin-right: 2.5%;
+}
+
+.slide-contacto a {
+    text-decoration: none;
+    color: black;
 }
 
 
