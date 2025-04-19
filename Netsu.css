@@ -31,6 +31,10 @@
     background-color: transparent;
 }
 
+.markers span {
+    font-size: 1rem;
+}
+
 .sidebar {
     display: flex;
     justify-content: space-between;
@@ -96,12 +100,11 @@
 }
 
 .markers button {
-    width: 11%;
+    width: 12.5%;
     height: 100%;
     background: none;
     border: none;
-    cursor: pointer;
-    margin: 0 40px; 
+    cursor: pointer; 
 }
 
 .markers img {
@@ -148,6 +151,77 @@
 .sidebar.scrolled-up-icons .logo.alternative {
     display: block;
 }
+
+@media screen and (min-width:768px) and (max-width:1024px) {
+
+    .markers span {
+        font-size: 0.9rem;
+    }
+    
+    .markers button {
+        width: 17.5%;
+    }
+    }
+
+@media screen and (min-width:613px) and (max-width:768px) {
+
+    .markers span {
+        font-size: 0.8rem;
+    }
+    
+    .markers button {
+        width: 20%;
+    }
+
+    .nav-link p {
+        font-size: 12px;
+    }
+    }
+
+@media screen and (min-width:425px) and (max-width:613px) {
+
+    .markers span {
+        font-size: 0.8rem;
+    }
+    
+    .markers button {
+        width: 25%;
+    }
+
+    .nav-link p {
+        font-size: 0;
+    }
+    }
+
+@media screen and (min-width:375px) and (max-width:425px) {
+
+    .markers span {
+        font-size: 0.7rem;
+    }
+    
+    .markers button {
+        width: 27.5%;
+    }
+    
+    .nav-link p {
+        font-size: 0;
+    }
+    }
+
+@media screen and (min-width:320px) and (max-width:375px) {
+
+    .markers span {
+        font-size: 0.6rem;
+    }
+
+    .markers button {
+        width: 27.5%;
+    }
+    
+    .nav-link p {
+        font-size: 0;
+    }
+    }
 
 #overlay {
     position: fixed;
@@ -279,87 +353,44 @@
     font-size: 24px;
 }
 
-.slide-mapa {
-    display: flex;
-    position: fixed;
-    right: 0%;
-    width: 29%;
-    height: 100%;
-    background-color: #ffffff;
-    color: #333;
-    z-index: 1000;
-    transition: left 0.3s ease-in-out;
-    box-sizing: border-box;
-    padding-top: 1.5%;;
-    justify-content: center;
-}
-
-.slide-mapa iframe {
-    width: 100%;
-    height: 30%;
-}
-
-.slide-mapa h3 {
-    justify-self: center;
-    font-weight: 400;
-    padding-top: 15%;
-    padding-bottom: 15%;
-}
-
-.slide-mapa a {
-    text-decoration: none;
-    color: black;
-}
-
-.slide-mapa span {
-    padding-top: 15%;
-}
-
-#cerrar-slide-mapa {
-    font-size: 2rem;
-    justify-self: center;
-    cursor: pointer;
-    font-weight:100;
-}
-
 .slide-contacto {
     display: flex;
     position: fixed;
-    right: 30%;
+    right: -30%;
     width: 29%;
     height: 100%;
     background-color: #ffffff;
     color: #333;
     z-index: 1000;
-    transition: left 0.3s ease-in-out;
+    transition: right 0.3s ease-in-out;
     box-sizing: border-box;
-    padding-top: 1.5%;;
+}
+
+.slide-contacto.open {
+    right: 0;
+}
+
+.slide-contacto span {
+    justify-self: center;
 }
 
 .slide-contacto h3 {
     justify-self: center;
     font-weight: 400;
-    padding-top: 2.5%;
-}
-
-#cerrar-slide-contacto {
-    font-size: 2rem;
-    padding-left: 50%;
-    cursor: pointer;
-    font-weight:100;
+    padding-top: 20%;
 }
 
 .slide-contacto p {
     justify-self: center;
     padding-top: 10%;
     padding-left: 10%;
-    padding-right: 10%;
+    padding-right: 5%;
     font-weight: 400;
     font-size: 0.9rem;
 }
 
 .telefono-slide {
-    padding-top: 6%;
+    padding-top: 7.5%;
     display: flex;
     justify-content: center; 
     cursor: pointer;
@@ -450,6 +481,92 @@
     color: black;
 }
 
+#close-contacto-btn {
+    background: none;
+    border: none;
+    color: #000000;
+    font-size: 1rem;
+    cursor: pointer;
+    align-items: center;
+    display: flex;
+    position: absolute;
+    background-color: none;
+    width: 100%;
+    height: 10%; 
+    justify-content: center;
+}
+
+#close-contacto-btn i {
+    font-size: 160%;
+}   
+
+#close-contacto-btn:hover {
+    background-color: #f5f5f5;
+    opacity: 0.8;
+}
+
+.slide-mapa {
+    display: flex;
+    position: fixed;
+    right: -30%;
+    width: 29%;
+    height: 100%;
+    background-color: #ffffff;
+    color: #333;
+    z-index: 1000;
+    transition: right 0.3s ease-in-out;
+    box-sizing: border-box;
+    justify-content: center;
+}
+
+.slide-mapa iframe {
+    width: 100%;
+    height: 30%;
+}
+
+.slide-mapa h3 {
+    justify-self: center;
+    font-weight: 400;
+    padding-top: 30%;
+    padding-bottom: 15%;
+}
+
+.slide-mapa a {
+    text-decoration: none;
+    color: black;
+}
+
+.slide-mapa span {
+    padding-top: 15%;
+}
+
+#close-map-btn {
+    background: none;
+    border: none;
+    color: #000000;
+    font-size: 1rem;
+    cursor: pointer;
+    align-items: center;
+    display: flex;
+    position: absolute;
+    background-color: none;
+    width: 100%;
+    height: 10%; 
+    justify-content: center;
+}
+
+#close-map-btn i {
+    font-size: 160%;
+}   
+
+#close-map-btn:hover {
+    background-color: #f5f5f5;
+    opacity: 0.8;
+}
+
+.slide-mapa.open {
+    right: 0;
+}
 
 .presentacion {
     display: block;
@@ -632,7 +749,6 @@
     
 }
 
-
 .indicadores {
     position: absolute;
     display: flex;
@@ -701,7 +817,7 @@
 
 @media screen and (max-width: 456px) {
     .todo {
-        height: 90vh;
+        height: 75vh;
     }
 
     .destacado {
@@ -709,7 +825,7 @@
     }
 
     .producto img {
-        transform: scale(155%);
+        transform: scale(160%);
     }
 
     .producto h1 {
@@ -731,7 +847,7 @@
     }
 
     .mov {
-        margin-top: 130%;
+        margin-top: 100%;
     }
 
     .mov .indicadores {
@@ -745,7 +861,7 @@
 
 @media screen and (min-width: 456px) and (max-width: 612px) {
     .todo {
-        height: 90vh;
+        height: 75vh;
     }
 
     .destacado {
@@ -753,7 +869,7 @@
     }
 
     .producto img {
-        transform: scale(140%);
+        transform: scale(150%);
     }
 
     .producto h1 {
@@ -775,7 +891,7 @@
     }
 
     .mov {
-        margin-top: 90%;
+        margin-top: 70%;
     }
     .mov .indicadores {
         padding-bottom: 10%;
@@ -879,6 +995,32 @@
     width: 100vw;
     overflow: hidden;
 }
+
+@media screen and (min-width:613px) and (max-width: 776px) {
+
+    .carrusel {
+        padding: 0;
+    }
+
+    .contenedor-marcas img {
+        height: 70%;
+        width: 7%;
+    }
+}
+
+@media screen and (max-width: 613px) {
+
+    .carrusel {
+        padding: 0;
+    }
+
+    .contenedor-marcas img {
+        height: 90%;
+        width: 6%;
+    }
+}
+
+
 
 .eventos {
     display: flex;
@@ -1056,12 +1198,17 @@
 }
 
 @media (max-width: 600px) {
+
+    .eventos {
+        height: 77vh;
+    }
+
     .evento h1 {
         font-size: 2rem;
     }
 
     .evento p {
-        font-size: 1rem;
+        font-size: 1.35rem;
         max-width: 100%;
     }
 
@@ -1078,7 +1225,13 @@
         font-size: 1rem;
     }
 }
+
 @media (max-width: 480px) {
+
+    .eventos {
+        height: 70vh;
+    }
+
     .evento h1 {
         font-size: 1.5rem;
     }

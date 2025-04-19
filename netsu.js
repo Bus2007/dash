@@ -92,6 +92,61 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+const mapToggle = document.getElementById('map-toggle');
+const slideMap = document.getElementById('slide-mapa');
+const overlay1 = document.getElementById('overlay');
+const closeMapBtn = document.getElementById('close-map-btn');
+
+mapToggle.addEventListener('click', function(event) {
+    event.preventDefault();
+    slideMap.classList.toggle('open');
+    overlay1.classList.toggle('open');
+    });
+
+closeMapBtn.addEventListener('click', function() {
+    slideMap.classList.remove('open');
+    overlay1.classList.remove('open');
+});
+
+document.addEventListener('click', function(event) {
+    if (slideMap.classList.contains('open') && !event.target.closest('.slide-mapa') && event.target !== mapToggle && !event.target.closest('#mainNav')) {
+        slideMap.classList.remove('open');
+        overlay1.classList.remove('open');
+    }
+});
+
+overlay.addEventListener('click', function() {
+    slideMap.classList.remove('open');
+    overlay1.classList.remove('open');
+});
+
+const contactToggle = document.getElementById('contact-toggle');
+const slideContact = document.getElementById('slide-contacto');
+const overlay2 = document.getElementById('overlay');
+const closeContactBtn = document.getElementById('close-contacto-btn');
+
+contactToggle.addEventListener('click', function(event) {
+    event.preventDefault();
+    slideContact.classList.toggle('open');
+    overlay2.classList.toggle('open');
+    });
+
+closeContactBtn.addEventListener('click', function() {
+    slideContact.classList.remove('open');
+    overlay2.classList.remove('open');
+});
+
+document.addEventListener('click', function(event) {
+    if (slideContact.classList.contains('open') && !event.target.closest('.slide-contacto') && event.target !== contactToggle && !event.target.closest('#mainNav')) {
+        slideContact.classList.remove('open');
+        overlay2.classList.remove('open');
+    }
+});
+
+overlay.addEventListener('click', function() {
+    slideContact.classList.remove('open');
+    overlay2.classList.remove('open');
+});
 
 const frases = ["Pro A/V", "IT cómputo", "Consumo", "Servicios de Valor"];
 let index = 0;
